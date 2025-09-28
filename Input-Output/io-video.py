@@ -1,16 +1,14 @@
 import cv2
 import os
 
-# Read video from file
+# read video from file
 
 
 video_path = os.path.join(os.path.dirname(__file__), '..', 'videos', 'SpongeBob.mp4') 
 video_path = os.path.abspath(video_path)
 video = cv2.VideoCapture(video_path)
 
-# # # Write the video to a new file
-
-# Visualize the video 
+# visualize the video 
 
 ret = True
 while ret:  
@@ -20,7 +18,7 @@ while ret:
         if cv2.waitKey(25) & 0xFF == ord('q'):
             break
 
-# Release the video capture object and close all OpenCV windows
+# release the video capture object and close all OpenCV windows
 
 video.release()
 cv2.destroyAllWindows()
